@@ -1,6 +1,7 @@
 /* body {
   margin: 0;
   font-family: 'luminari', fantasy;
+  color: saddlebrown;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,8 +12,8 @@ code {
 } */
 
 body {
-  font-family: luminari, fantasy;
-  color: saddlebrown;
+  font-family: monaco, monospace;
+  color: slategrey;
 }
 
 @tailwind base;
