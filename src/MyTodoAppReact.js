@@ -1,17 +1,26 @@
 import React, {useState} from 'react'
 import Todo from './components/Todo';
+import CheckTodo from './components/CheckTodo'
 
+let initialState = [
+  {data: 'work', isActive: true, key: 0},
+  {data: 'chill', isActive: false, key: 1},
+  {data: 'potatoes', isActive: false, key: 2}
+] 
 
 function MyTodoAppReact() {
 
-  const [currentTasks, setCurrentTasks] = useState("")
-
+  const [currentTasks, setCurrentTasks] = useState(initialState) 
+  
   return (
-    <div className = 'flex flex-col'>
-      <div className = 'flex flex-row items-end'>
-      <button className = 'flex px-2 py-1 border-2 rounded-xl border-slate-300 text-3xl'>To Do!</button>
+    <div className = 'flex border-2 rounded-2xl border-slate-400 bg-slate-100 flex-col'>
+      <div className = 'flex p-4 flex-col'>
       <Todo
-        currentTask = {currentTasks}
+        setCurrentTasks = {setCurrentTasks}
+      />
+      <CheckTodo
+      currentTasks = {currentTasks}
+      setCurrentTasks = {setCurrentTasks}
       />
       </div>
     </div>
