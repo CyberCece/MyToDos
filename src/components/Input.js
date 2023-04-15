@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-export default function Todo({setCurrentTasks}) {
+export default function Input({setCurrentTasks}) {
 
   const [task, setTasks] = useState("")
   const [keyNumber, setKeyNumber] = useState(3) 

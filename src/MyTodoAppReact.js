@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Todo from './components/Todo';
-import CheckTodo from './components/CheckTodo'
+import Input from './components/Input';
+import CheckTodo from './components/CheckTodo';
 
 let initialState = [
   {data: 'work', isActive: true, key: 0},
@@ -15,7 +15,7 @@ function MyTodoAppReact() {
   return (
     <div className = 'flex border-2 rounded-2xl border-slate-400 bg-slate-100 flex-col'>
       <div className = 'flex p-4 flex-col'>
-      <Todo
+      <Input
         setCurrentTasks = {setCurrentTasks}
       />
       <CheckTodo
