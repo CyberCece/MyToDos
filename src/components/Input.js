@@ -7,8 +7,8 @@ export default function Input({setCurrentTasks}) {
   const [keyNumber, setKeyNumber] = useState(3) 
 
   return(
-    <div>
-      <input className='flex px-2 min-w-[350px] w-full h-full min-h-[50px] text-3xl text-right rounded-xl bg-slate-50  border-b-2 border-slate-300'
+    <div className='flex pb-4'>
+      <input className='flex px-2 min-w-[350px] w-full h-full min-h-[50px] text-3xl text-center rounded-xl bg-slate-50  border-b-2 border-slate-300'
       placeholder='So many things to do!'
       type='text'
       value = {task}

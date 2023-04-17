@@ -14,6 +14,8 @@ code {
 body {
   font-family: monaco, monospace;
   color: slategrey;
+  text-align:center;
+  
 }
 
 @tailwind base;

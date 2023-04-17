@@ -5,7 +5,7 @@ export default function Filters({ setCurrentTasks, setFilter}) {
   return(
     <div className='flex flex-row justify-evenly pt-4'>
       <button
-        className='flex pt-2'
+        className='flex py-1 px-2 rounded-xl bg-slate-200  border-b-2 border-slate-400'
         onClick = {() => {
           setFilter(() => "All")
           
@@ -14,7 +14,7 @@ export default function Filters({ setCurrentTasks, setFilter}) {
         All
       </button>
       <button
-        className='flex pt-2'
+        className='flex py-1 px-2 rounded-xl bg-slate-200  border-b-2 border-slate-400'
         onClick = {() => {
           setFilter(() => "Checked")
         }}
@@ -22,7 +22,7 @@ export default function Filters({ setCurrentTasks, setFilter}) {
         Checked
       </button>
       <button
-        className='flex pt-2'
+        className='flex py-1 px-2 rounded-xl bg-slate-200  border-b-2 border-slate-400'
         onClick = {() => {
           setFilter(() => "Unchecked")
         }}
@@ -30,7 +30,7 @@ export default function Filters({ setCurrentTasks, setFilter}) {
         Unchecked
       </button>
       <button
-        className='flex pt-2'
+        className='flex py-1 px-2 rounded-xl bg-slate-200  border-b-2 border-slate-400'
         onClick={() => {
           setCurrentTasks((x) => {
             return clearChecked(x)

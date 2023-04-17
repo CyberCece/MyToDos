@@ -1,20 +1,21 @@
 import React from 'react'
 
 export default function CheckTodo({currentTasks, setCurrentTasks, filter}) {
-  if (currentTasks.length === 0) return "No To-Do's left for you. Go have a cupcake :)"
+  if (currentTasks.length === 0) return "No To-Do's left. Go have a cupcake :D"
   return(
-    <div className='flex flex-col pt-4'>
+    <div className='flex flex-col'>
     {/* {data: 'work', isActive: true, key: 0} */}
       
       {currentTasks.map(t => {
         const content = <div 
-          className='flex flex-row align-center'
+          className='flex px-3 bg-slate-500 text-slate-50 rounded-xl items-center flex-row justify-between'
           key = {t.key}
           >
             <div 
-            className ={`${t.isActive ? '' : 'line-through'} flex capitalize px-3`} 
+            className ={`${t.isActive ? '' : 'line-through'} flex capitalize`} 
             > 
               <input 
+              className='flex'
               type="checkbox"
               checked={!t.isActive}
               onChange={() => {
@@ -25,7 +26,7 @@ export default function CheckTodo({currentTasks, setCurrentTasks, filter}) {
               /> {t.data}
             </div>
             <button
-            className='flex justify-end'
+            className='flex'
             onClick = {() => {
               setCurrentTasks((x) => {
                 return deleteEntry(x, t)
